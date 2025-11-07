@@ -29,8 +29,6 @@ fun DataApp(
             startDestination = Navigasi.Homepage.name,
             modifier = Modifier.padding(paddingValues = isiRuang)
         ) {
-
-            // 🏠 Halaman Awal
             composable(route = Navigasi.Homepage.name) {
                 Awal(
                     OnSubmitBtnClick = {
@@ -38,8 +36,6 @@ fun DataApp(
                     }
                 )
             }
-
-            // 📝 Halaman Form
             composable(route = Navigasi.Formulirku.name) {
                 Form(
                     onBackBtnClick = {
@@ -53,8 +49,6 @@ fun DataApp(
                     }
                 )
             }
-
-            // 📋 Halaman Tampil Data
             composable(
                 route = "Detail/{nama}/{jk}/{status}/{alamat}"
             ) { backStackEntry ->
