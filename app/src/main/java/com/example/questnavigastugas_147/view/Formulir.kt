@@ -11,6 +11,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -88,7 +89,18 @@ fun Form(modifier: Modifier = Modifier,
                         .fillMaxWidth()
                         .verticalScroll(rememberScrollState()),
                     horizontalAlignment = Alignment.Start
-                )
+                ) {
+                    Text(text = "NAMA LENGKAP", fontWeight = FontWeight.Bold)
+                    OutlinedTextField(
+                        value = textNama,
+                        onValueChange = { textNama = it },
+                        label = { Text("Isian nama lengkap") },
+                        singleLine = true,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(vertical = 8.dp)
+                    )
+                }
             }
         }
     }
