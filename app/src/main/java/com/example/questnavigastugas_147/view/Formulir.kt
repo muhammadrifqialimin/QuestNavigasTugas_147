@@ -61,5 +61,21 @@ fun Form(modifier: Modifier = Modifier,
                 )
             ),
         contentAlignment = Alignment.TopCenter
-    )
+    ){
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = Modifier.fillMaxWidth()
+        ){
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(
+                        Brush.horizontalGradient(
+                            colors = listOf(Color(0xFFD32F2F), Color(0xFFE040FB))
+                        )
+                    )
+                    .padding(vertical = 24.dp)
+            )
+        }
+    }
 }
