@@ -124,6 +124,25 @@ fun Form(modifier: Modifier = Modifier,
                             Text(text = item, modifier = Modifier.padding(start = 8.dp))
                         }
                     }
+                    Spacer(modifier = Modifier.height(16.dp))
+                    Text(text = "STATUS PERKAWINAN", fontWeight = FontWeight.Bold)
+                    status.forEach { item ->
+                        Row(
+                            modifier = Modifier
+                                .selectable(
+                                    selected = textStatus == item,
+                                    onClick = { textStatus = item }
+                                )
+                                .padding(vertical = 2.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            RadioButton(
+                                selected = textStatus == item,
+                                onClick = { textStatus = item }
+                            )
+                            Text(text = item, modifier = Modifier.padding(start = 8.dp))
+                        }
+                    }
                 }
             }
         }
